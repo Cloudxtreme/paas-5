@@ -1,0 +1,8 @@
+cloudbot-init_1.0-3ubuntu9_all.deb python optional
+cloudbot-clcapi_1.0-3ubuntu9_all.deb python optional
+cloudbot-ccapi_1.0-3ubuntu9_all.deb python optional
+cloudbot-walrusapi_1.0-3ubuntu9_all.deb python optional
+cloudbot-ncapi_1.0-3ubuntu9_all.deb python optional
+cloudbot-registryapi_1.0-3ubuntu9_all.deb python optional
+cloudbot-proxyregistryapi_1.0-3ubuntu9_all.deb python optional
+cloudbot-proxyclcapi_1.0-3ubuntu9_all.deb python optional

@@ -1,0 +1,64 @@
+Source: agent-modules
+Section: python
+Priority: optional
+Maintainer: thomas.li  <thomas.li@sinobot.com.cn>
+Build-Depends: debhelper (>= 7), python-support (>= 0.6), python-setuptools, python-stdeb, thrift, pylint
+Homepage: http://www.sinobot.com.cn
+Standards-Version: 3.8.3
+
+Package: cloudbot-init
+Architecture: all
+Depends:  python-cloudbot, python-ldap
+Description: cloudbot configuration agent core module
+
+#Package: cloudbot-jiedians
+#Architecture: all
+#Depends:  python-cloudbot, python-ldap
+#Description: cloudbot configuration agent core module
+
+#Package: cloudbot-gc
+#Architecture: all
+#Depends:  python-cloudbot, python-ldap
+#Description: cloudbot configuration agent core module
+
+#Package: cloudbot-update
+#Architecture: all
+#Depends:  python-cloudbot, python-ldap
+#Description: cloudbot configuration agent core module
+
+
+Package: cloudbot-clcapi
+Architecture: all
+Depends:  python-cloudbot, python-ldap, thrift
+Description: cloudbot configuration agent core module
+
+
+Package: cloudbot-ccapi
+Architecture: all
+Depends:  python-cloudbot, python-ldap, thrift
+Description: cloudbot configuration agent core module
+
+Package: cloudbot-walrusapi
+Architecture: all
+Depends:  python-cloudbot, python-ldap, thrift
+Description: cloudbot configuration agent core module
+
+Package: cloudbot-ncapi
+Architecture: all
+Depends:  python-cloudbot, python-ldap, thrift
+Description: cloudbot configuration agent core module
+
+Package: cloudbot-registryapi
+Architecture: all
+Depends:  python-cloudbot, python-ldap, thrift
+Description: cloudbot configuration agent core module
+
+Package: cloudbot-proxyregistryapi
+Architecture: all
+Depends:  python-cloudbot, python-ldap, thrift
+Description: cloudbot configuration agent core module
+
+Package: cloudbot-proxyclcapi
+Architecture: all
+Depends:  python-cloudbot, python-ldap, thrift
+Description: cloudbot configuration agent core module

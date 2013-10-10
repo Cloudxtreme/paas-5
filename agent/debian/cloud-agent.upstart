@@ -1,0 +1,19 @@
+# cloud-agent
+
+description "Cloudbot Configuration Agent"
+author "Thomas Li<thomas.li@sinobot.com.cn>"
+
+start on (starting network-interface
+          or starting network-manager
+          or starting networking)
+stop on runlevel [!016]
+respawn
+
+env LOG_LEVEL=DEBUG
+
+script
+  if [ -e /etc/default/cloud-agent ]; then
+    . /etc/default/cloud-agent
+  fi
+  exec start-stop-daemon --start --chuid eucalyptus --exec /usr/sbin/cloud-agent > /tmp/cloud-agent.log 2>&1
+end script

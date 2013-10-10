@@ -1,0 +1,5 @@
+Template: paas/ldap-ipaddr
+Type: string
+Default: localhost 
+Description: Paas LDAP IP Addr:
+ Enter a IP Addr for LDAP Server.

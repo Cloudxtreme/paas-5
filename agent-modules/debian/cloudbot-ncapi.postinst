@@ -1,0 +1,11 @@
+#!/bin/sh -e
+
+. /usr/share/debconf/confmodule
+
+if [ "$1" = "configure" ]
+then
+    adduser eucalyptus libvirtd
+fi
+
+
+

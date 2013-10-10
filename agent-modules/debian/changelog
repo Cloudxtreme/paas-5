@@ -1,0 +1,71 @@
+agent-modules (1.0-3ubuntu9) lucid; urgency=low
+
+  [ thomas li ]
+  * add cloudbot-init.templates so that eucalyptus-nc postinst doesn't fail
+
+ -- thomas li  <thomas.li@sinobot>  Wed, 03 Mar 2012 14:02:24 +0100
+
+agent-modules (1.0-3ubuntu9) lucid; urgency=low
+
+  * move gc module from NC to CLC
+
+ -- jiff <jiff@ubuntu>  Fri, 28 Oct 2011 10:28:40 +0800
+
+agent-modules (1.0-2ubuntu8) lucid; urgency=low
+
+  * monitor instances launched by desktop nodes, destroy it if desktop is dead 
+  * fix libvirt library issue, delete connection and domain explictly
+
+ -- jiff <jiff@ubuntu>  Mon, 26 Sep 2011 11:42:41 +0800
+
+agent-modules (1.0-1ubuntu7) lucid; urgency=low
+
+  * add logging facility
+  * cloud-cert.pem will be upload to LDAP by cloud controller, not by cloud-agent
+
+ -- jiff <jiff@ubuntu>  Mon, 05 Sep 2011 13:41:52 +0800
+
+agent-modules (1.0-1ubuntu6) lucid; urgency=low
+
+  * more restrict verify of clc data in LDAP
+  * check cloud certification size 
+
+ -- jiff <jiff@ubuntu>  Thu, 01 Sep 2011 12:47:37 +0800
+
+agent-modules (1.0-1ubuntu5) lucid; urgency=low
+
+  * extend cloud certification valid days to 3650
+  * bug fixes for desktopNode
+  * automatically upgrades dependencies 
+  * keep old config files during upgrading
+
+ -- jiff <jiff@ubuntu>  Tue, 30 Aug 2011 16:25:51 +0800
+
+agent-modules (1.0-1ubuntu4) natty; urgency=low
+
+  * extract modules from cloud-agent
+
+ -- jiff <jiff@ubuntu>  Thu, 25 Aug 2011 15:11:52 +0800
+
+cloud-agent (1.0-1ubuntu3) natty; urgency=low
+
+  * integrate eucalyptus module register feature
+  * fix issues in register cc & nc
+  * generate cloud certifications on registering clc
+
+ -- jiff <jiff@ubuntu>  Thu, 25 Aug 2011 14:49:46 +0800
+
+cloud-agent (1.0-1ubuntu2) lucid; urgency=low
+
+  [ Sinobot Signing Key (Jiff Shen) ]
+  * fix bug in find Repository
+  * modules depends on dbus
+
+ -- Sinobot Signing Key (Jiff Shen) <package@sinobot.com.cn>  Tue, 23 Aug 2011 02:05:30 -0400
+
+cloud-agent (1.0) lucid; urgency=low
+
+  [ Jiff Shen ]
+  * create debian package
+
+ -- Sinobot Signing Key (Jiff Shen) <package@sinobot.com.cn>  Tue, 23 Aug 2011 02:04:53 -0400

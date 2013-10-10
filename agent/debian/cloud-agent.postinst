@@ -1,0 +1,12 @@
+#!/bin/sh -e
+
+if [ "$1" = "configure" ]; then
+	if ! getent passwd eucalyptus > /dev/null 2>&1; then
+		adduser --system --shell /bin/bash --home /var/lib/eucalyptus --group eucalyptus
+	fi
+	
+	mkdir -p /etc/eucalyptus
+	chown -R eucalyptus:eucalyptus /etc/eucalyptus
+fi
+
+chown -R eucalyptus:eucalyptus /var/log/eucalyptus ||true

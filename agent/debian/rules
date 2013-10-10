@@ -1,0 +1,46 @@
+#!/usr/bin/make -f
+
+# Verbose mode
+#export DH_VERBOSE=1
+
+clean:
+	dh_clean
+
+build: build-stamp
+build-stamp:
+	dh_testdir
+
+	touch build-stamp
+
+check: check-stamp
+check-stamp:
+	>$@
+
+maybe_check = $(if $(findstring nocheck,$(DEB_BUILD_OPTIONS)),,check)
+
+install: build-stamp
+	dh_testdir
+	dh_installdirs
+	
+	install -d $(CURDIR)/debian/cloud-agent/var/log/eucalyptus
+	install -d $(CURDIR)/debian/cloud-agent/etc/cloud-agent/modules
+	install -m 0755 $(CURDIR)/cloud-agent.py $(CURDIR)/debian/cloud-agent/usr/sbin/cloud-agent
+	install -m 0755 $(CURDIR)/debian/cloud-agent.upstart $(CURDIR)/debian/cloud-agent/etc/init/cloud-agent.conf
+
+	touch install-stamp
+
+binary-arch: $(maybe_check)
+binary-indep: $(maybe_check) install
+	dh_installdocs README
+	dh_installchangelogs
+	dh_compress
+	dh_fixperms
+	dh_pysupport
+	dh_gencontrol
+	dh_installdeb
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-arch binary-indep
+.PHONY: build clean binary-indep binary-arch binary
+

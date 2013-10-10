@@ -1,0 +1,26 @@
+#!/bin/sh
+
+set -e
+
+#DEBHELPER#
+
+if [ "$1" = "configure" ]; then
+    mkdir -p /storage/images/
+    mkdir -p /storage/images/extdisk
+    chown eucalyptus:eucalyptus /storage/images
+    chown eucalyptus:eucalyptus /storage/images/extdisk
+    mkdir -p /var/lib/eucalyptus/storage/iso
+    chown eucalyptus:eucalyptus /var/lib/eucalyptus/storage/iso
+    mkdir -p /var/lib/eucalyptus/storage/p2v
+    chown eucalyptus:eucalyptus /var/lib/eucalyptus/storage/p2v
+    if [ -e /etc/cloud-agent/modules/disk2 ]; then
+        mv /etc/cloud-agent/modules/disk2 /storage/images/extdisk/
+        chown eucalyptus:eucalyptus /storage/images/extdisk/disk2
+    fi
+    
+#    if [ -e /etc/init/eucalyptus.conf ]; then
+#        restart eucalyptus || :
+#    fi
+fi
+
+exit 0

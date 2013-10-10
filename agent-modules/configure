@@ -1,0 +1,4 @@
+#! /bin/sh
+
+echo "-- start to build & package PaaS"
+#ac_default_prefix=/usr/local/cloudDesktop

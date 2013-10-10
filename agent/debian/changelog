@@ -1,0 +1,12 @@
+cloud-agent (1.0-2ubuntu1) lucid; urgency=low
+
+  * update logging 
+
+ -- jiff <jiff@ubuntu>  Fri, 28 Oct 2011 10:35:18 +0800
+
+cloud-agent (1.0-1ubuntu4) lucid; urgency=low
+
+  * extract cloud-agent from old package
+  * add logging facility
+
+ -- jiff <jiff@ubuntu>  Thu, 01 Sep 2011 16:28:34 +0800
